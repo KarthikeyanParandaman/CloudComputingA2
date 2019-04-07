@@ -1,0 +1,30 @@
+<html><head><META http-equiv="Content-Type" content="text/html; charset=utf-8"></head><body>
+
+
+
+<div>
+  <form method="get" action="/uanagram">
+
+      <h1 align="center">ANAGRAN INFORMATION</h1>
+      <table border="1" align="center">
+         <tr>
+            <th>Lexicographical</th>
+            <th>Lettercount</th>
+            <th>String</th>
+            <th>Wordcount</th>
+         </tr><td>
+         {% for y in query %}
+         <tr>
+          <td> {{ y.lexicographical }} </td>
+          <td> {{ y.letter_count }} </td>
+          <td>{% for x in y.list_of_words %} {{ x }} {% endfor %}</td>
+          <td> {{ y.word_count }}</td>
+           {% endfor %}
+          </tr>
+      </td></table>
+</form>
+
+<h3><b><p align="center"><a href="/">Home</a></p></b></h3>
+</div>
+
+</body></html>

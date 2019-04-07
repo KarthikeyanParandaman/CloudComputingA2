@@ -1,0 +1,34 @@
+<html>
+<head>
+<title>Simple list manipulation and storage</title>
+<meta charset="utf-8">
+</head>
+<body>
+{% if user %}
+<br></br>
+<h1 align="center">ANAGRAM ENGINE</h1>
+<br></br>
+<b><div id = "menu" align = "middle" >
+        <a href = "/add">ADD WORD</a> |
+        <a href = "/uanagram">ANAGRAM</a> |
+        <a href = "/wordlist">WORD LIST</a>
+     </div></b>
+     <br<\></br>
+     <h2 align="center"><b>Search Anagram</b></h2>
+     <form action="/" align="center">
+         <b>Search word</b> : <input type="text" name="searchword" pattern="[a-zA-Z]+" required="True"/><br>
+       </br>
+         <input type="submit" name="button" value="search"/>
+         </form>
+         <p align="center"><table><tr>
+         <td>{% for y in my_list.list_of_words %}{{ y }}<br>{% endfor %}
+      {% for i in d %}{% for j in i.list_of_words %}{{ j }}<br>{% endfor %}{% endfor %}
+</td></table></p>
+         <br/>
+{% else %}
+<h1><b><center><p>ANAGRAM ENGINE</p></b></h1></center>
+{% endif %}
+<br>
+<h3><b><p align ="center">you can {{ url_string }} <a href='{{ url }}'>here</a></p></b><h3>
+</body>
+</html>
